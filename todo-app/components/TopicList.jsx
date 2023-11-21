@@ -12,12 +12,12 @@ function TopicList() {
     getData();
   }, [todo]);
   const getData = async () => {
-    const res = await axios.get("http://localhost:3000/api/topic");
+    const res = await axios.get("https://todo-app-lac-rho.vercel.app/api/topic");
     const data = await res.data;
     setTodos(data.todo);
   };
   const handleDelete = async (e, id) => {
-    const res = await axios.delete(`http://localhost:3000/api/topic?id=${id}`);
+    const res = await axios.delete(`https://todo-app-lac-rho.vercel.app/api/topic?id=${id}`);
   };
   if (todo.length === 0) {
     return (
