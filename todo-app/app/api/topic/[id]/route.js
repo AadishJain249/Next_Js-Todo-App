@@ -2,6 +2,7 @@ import connection from "@/libs/mongodb";
 import Todo from "@/models/todo";
 import { NextResponse } from "next/server";
 export async function PUT(req, res) {
+
     const {title,description,id } = await req.json();
     await connection();
     await Todo.findByIdAndUpdate(id,{ title, description });

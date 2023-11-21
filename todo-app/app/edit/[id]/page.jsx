@@ -23,7 +23,7 @@ function EditTodo() {
   }
   async function addData() {
     try {
-      const res = await axios.put(`https://todo-app-lac-rho.vercel.app/api/topic/${id}`, {
+      const res = await axios.put(`api/topic/${id}`, {
         title: title,
         description: desc,
         id:id

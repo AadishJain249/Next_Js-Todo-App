@@ -21,7 +21,7 @@ function AddTodo() {
   }
   async function addData() {
     try {
-      const res = await axios.post("https://todo-app-lac-rho.vercel.app/api/topic", {
+      const res = await axios.post("api/topic", {
         title: title,
         description: desc,
       },config);

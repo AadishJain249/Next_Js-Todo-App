@@ -16,7 +16,6 @@ export async function POST(req, res) {
 }
 export async function DELETE(req, res) {
   const id = req.nextUrl.searchParams.get("id");
-  console.log(id);
   await connection();
   await Todo.findByIdAndDelete(id);
   return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
